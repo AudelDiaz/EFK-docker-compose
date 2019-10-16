@@ -7,9 +7,8 @@ services:
     depends_on:
       - fluentd
     logging:
-      driver: "fluentd"
+      driver: fluentd
       options:
-        fluentd-address: localhost:24224
         tag: httpd.access
     networks:
       - backend-network
